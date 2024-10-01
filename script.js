@@ -1,47 +1,45 @@
 
-//Operadpres Aritiméticos
-
-let x=10;
-let y=5;
-let soma=x+y;
-let subtracao= x-y;
-let multiplicacao= x*y;
-let divisao= x/y;
-let resto= x%y; //resto da divisão
-
-//Operadores de Atribuição
-
-let a = 10; //atribui valor (=)
-a += 5; //é equivalente à a = a +5
-
-//Operadores de Comparação
-
-let idade = 20;
-let maiorDeIdade = idade >=18; //retorna true caso idade seja maior que 18
-let idade10 = idade == 10; //retorna true caso idade seja 10
-
-//Estruturas Condicionais
-
-const kilo = 10;
-if(kilo>=10){
-     console.log("kilo 10");
+//EXERCÍCIO 01
+let idade = prompt("Olá, digite sua idade.");
+let maiorDeIdade = 18;
+if (idade >= maiorDeIdade){
+    console.log("Você é maior de idade.");
 }
 else{
-    console.log("kilo -10");
+    console.log("Você é menor de idade.")
+}
+//EXERCÍCIO 02
+function verificaParOuImpar(verificar){
+if (verificar % 2 == 0){
+    return "par";
+}
+else{
+    return "impar";
+}
+}
+numeroParaVerificar = prompt("Digite um numero para verificar se é par ou impar.");
+let valorDeretorno = verificaParOuImpar(numeroParaVerificar);
+console.log("o numero " , numeroParaVerificar , " é " , valorDeretorno);
+
+//EXERCÍCIO 03
+let testarNumero = prompt("Digite um numero para testarmos se é positivo ou negativo.")
+if(testarNumero > 0){
+    console.log("O número " , testarNumero, " é maior que zero!");
+}
+else
+if(testarNumero < 0){
+    console.log("O número " , testarNumero, " é menor que zero!");
+}
+else{
+    console.log("O numero é Zero!");
 }
 
-//Estruturas de repetição
-
-//loop for
-
-for (let i=0; i<5; i++){
-    console.log("Iteração ",i);
+//EXERCÍCIO 04
+function tabuada(numeroDoUsuario){
+    for(x=1; x<=10;x++){
+        let resultado = numeroDoUsuario*x;
+        console.log(numeroDoUsuario,"X",x, " é igual a: ", resultado);
+    }
 }
-
-//loop while
-
-let contador = 0;
-while (contador< 5){
-    console.log("o contador é",contador);
-    contador++;
-}
+let numeroTabuada = prompt("Digite um numero e te daremos a tabuada até o 10");
+tabuada(numeroTabuada);
