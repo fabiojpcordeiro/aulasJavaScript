@@ -1,49 +1,47 @@
-//Declaração de variáveis
-var nome= "Fabio";          //Tipo obsoleto de variavel
-let idade= 5                //Tipo atual de variavel 
-const cidade= "Guarapuava"  //Tipo de constante
 
-console.log("o nome é: ",nome);
-console.log("a idade é: ",idade);
-console.log("A cidade é: ", cidade);
+//Operadpres Aritiméticos
 
+let x=10;
+let y=5;
+let soma=x+y;
+let subtracao= x-y;
+let multiplicacao= x*y;
+let divisao= x/y;
+let resto= x%y; //resto da divisão
 
-//Exemplo de objeto
-const pessoa={
-    nome: "fabio",
-    idade: "27",
-    sexo: "M",
-    telefone: "9999-9999"
+//Operadores de Atribuição
+
+let a = 10; //atribui valor (=)
+a += 5; //é equivalente à a = a +5
+
+//Operadores de Comparação
+
+let idade = 20;
+let maiorDeIdade = idade >=18; //retorna true caso idade seja maior que 18
+let idade10 = idade == 10; //retorna true caso idade seja 10
+
+//Estruturas Condicionais
+
+const kilo = 10;
+if(kilo>=10){
+     console.log("kilo 10");
 }
-//Modificando um objeto
-let cachorro= {
-    nome: "Rex",
-    idade: 5,
-    vacinado: false
+else{
+    console.log("kilo -10");
 }
-console.log(cachorro);
-cachorro.nome= "Banzé";
-cachorro.vacinado= true;
-console.log(cachorro);
 
-//Concatenação de Strings
-let nome2= "Fabio";
-let message="Bem vindo, " + nome + " ao sistema";
-console.log(message);
+//Estruturas de repetição
 
-//Operações em javascript
-let a=25;
-let b=30;
-let total = a+b;
-console.log("O total é: ",total);
+//loop for
 
-//Conversão de tipos
-//para string
-let turma = 1;
-let turmaFormatado = String(turma);
-console.log(turmaFormatado);
+for (let i=0; i<5; i++){
+    console.log("Iteração ",i);
+}
 
-//para numero
-let telefone="4299999999";
-let telefoneFormatado= Number(telefone);
-console.log("O telefone é: ", telefoneFormatado);
+//loop while
+
+let contador = 0;
+while (contador< 5){
+    console.log("o contador é",contador);
+    contador++;
+}
