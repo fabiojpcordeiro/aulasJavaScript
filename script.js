@@ -1,45 +1,38 @@
-
-//EXERCÍCIO 01
-let idade = prompt("Olá, digite sua idade.");
-let maiorDeIdade = 18;
-if (idade >= maiorDeIdade){
-    console.log("Você é maior de idade.");
-}
-else{
-    console.log("Você é menor de idade.")
-}
-//EXERCÍCIO 02
-function verificaParOuImpar(verificar){
-if (verificar % 2 == 0){
-    return "par";
-}
-else{
-    return "impar";
-}
-}
-numeroParaVerificar = prompt("Digite um numero para verificar se é par ou impar.");
-let valorDeretorno = verificaParOuImpar(numeroParaVerificar);
-console.log("o numero " , numeroParaVerificar , " é " , valorDeretorno);
-
-//EXERCÍCIO 03
-let testarNumero = prompt("Digite um numero para testarmos se é positivo ou negativo.")
-if(testarNumero > 0){
-    console.log("O número " , testarNumero, " é maior que zero!");
-}
-else
-if(testarNumero < 0){
-    console.log("O número " , testarNumero, " é menor que zero!");
-}
-else{
-    console.log("O numero é Zero!");
+// Função Simples (declarativa)
+function saudacao(){
+    return console.log("Olá mundo");
 }
 
-//EXERCÍCIO 04
-function tabuada(numeroDoUsuario){
-    for(x=1; x<=10;x++){
-        let resultado = numeroDoUsuario*x;
-        console.log(numeroDoUsuario,"X",x, " é igual a: ", resultado);
-    }
+//Função com parâmetros
+function soma(valorA, valorB){
+    const totalSoma = valorA + valorB;
+    return console.log(totalSoma);
 }
-let numeroTabuada = prompt("Digite um numero e te daremos a tabuada até o 10");
-tabuada(numeroTabuada);
+
+//Função Anônima
+const multiplicar = function(valorA, valorB){
+    const total= valorA * valorB;
+    return console.log(total);
+}
+
+//Arrow Function
+const dividir = (a,b) => a/b;
+
+//Função com valor padrão de parâmetros
+function exponencial(base,expoente = 2){
+    const exp=base ** expoente;
+    return console.log(exp);
+}
+
+//Função de Callback
+function inicializarAplicacao(){
+    //Invocar as funções
+    saudacao();
+    soma(10,5);
+    multiplicar(3,6);
+    exponencial(2);
+    exponencial(2,6);
+    console.log(dividir(10,5));
+}
+
+inicializarAplicacao();
