@@ -12,7 +12,6 @@ header{
     margin-bottom: 0;
     height: 90px;
     padding: 0;
-    font-size: 30px;
     text-align: center;
     background-image: url(assets/RM1.webp);
     box-sizing: border-box;
@@ -20,6 +19,7 @@ header{
 header h1{
     color: rgb(242, 162, 14);
     font-weight: 700;
+    font-size: 65px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 main{
@@ -56,6 +56,8 @@ footer{
     transition: ease;
     box-shadow: 0 0 10px 5px #97ce4c;
     border: 1px solid #76ba17;
+    color: black;
+    font-weight: 800;
 }
 .card h3{
     margin: 0;
@@ -80,4 +82,48 @@ footer{
     transform: scale(1.15);
     transition: ease 0.5s;
     overflow: visible;
+}
+
+@media (max-width: 600px){
+    .interface{
+        align-items: center;
+        width: 90%;
+        margin: 0px auto; 
+    }
+    #flex-container{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        width: 90%;
+    }
+    
+    .card{
+        background-color: #8ae60e;
+        padding: 0;
+        box-sizing: border-box;
+        width: 70%;
+        height:90vh;
+        border-radius: 40px;
+        overflow: hidden;
+        text-align: center;
+        transition: ease;
+        box-shadow: 0 0 10px 5px #97ce4c;
+        border: 1px solid #76ba17;
+        color: black;
+        font-weight: 800;
+    }
+    .card-img{
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .card-content{
+        margin: 0;
+        line-height: 40px;
+        font-size: 40px;
+    }
 }
