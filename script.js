@@ -1,34 +1,43 @@
-let arrayPokemons;
-function getPokemon(){
-    //fetch cham uma API
-    fetch("https://pokeapi.co/api/v2/pokemon/",
+let arrayCards;
+function getData(){
+    fetch("https://rickandmortyapi.com/api/character/?page=19",
         {
             method: "GET"
         }
-    )
-    .then ((response) => response.json())
-    .then ((data) => {
-        arrayPokemons = data.results;
-        appendData(arrayPokemons);
+    ).then((response) => response.json())
+    .then((data) => {
+        arrayCards = data.results;
+        appendData(arrayCards);
     }
     )
     .catch((error) =>{
         console.error ("erro", error);
-    }
-    ) 
+    })
 }
-function appendData (pokemons){
-    let place = document.querySelector("#data-output");
-    let output = "";
 
-    for(let pokemon of pokemons){
-        output += `
-        <tr>
-        <td>${pokemon.name}</td>
-        <td>${pokemon.url}</td>
-        </td>
+function appendData(cards){
+    let place = document.querySelector("#flex-container");
+    let retrievedData = "";
+    
+    for(let card of cards){
+        
+        retrievedData += `
+        <div class="card">
+        <div class="card-img">
+        <img src= ${card.image}>
+        </div>
+        <div class="card-content">
+        <h3>Nome: ${card.name}</h3>
+        <p> Status: ${card.status}</p>
+        <p> Espécie: ${card.species}</p>
+        <p> Tipo: ${card.type}</p>
+        <p> Origem: ${card.origin.name}</p>
+        <p> Localização Atual: ${card.location.name}</p>
+        </div>
+        </div>
         `
     }
-    place.innerHTML = output;
+    place.innerHTML = retrievedData;
 }
-getPokemon();
+
+getData();
